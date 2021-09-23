@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:alpine
+  rediscommander:
+    image: rediscommander/redis-commander
+    environment:
+      - REDIS_PORT=6379 # that's the default Redis port
+      - REDIS_HOST=
+      - PORT=80
